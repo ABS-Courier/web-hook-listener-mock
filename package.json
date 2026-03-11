@@ -1,0 +1,13 @@
+{
+  "name": "webhook-listener",
+  "version": "1.0.0",
+  "description": "A simple Real-time Webhook Listener with a Beautiful UI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
