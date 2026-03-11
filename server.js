@@ -29,11 +29,11 @@ app.get('/webhook', (req, res) => {
     const challenge = req.query.challenge;
     
     // You can optionally add authentication check here if your sender includes it during verification
-    const authHeader = req.headers[AUTH_HEADER_KEY] || req.headers[AUTH_HEADER_KEY.toLowerCase()];
-    if (authHeader !== AUTH_HEADER_VALUE) {
-        console.log(`[Reject] Verification challenge rejected. Missing or invalid auth header.`);
-        return res.status(401).json({ error: 'Unauthorized', message: `Expected valid ${AUTH_HEADER_KEY} header` });
-    }
+   // const authHeader = req.headers[AUTH_HEADER_KEY] || req.headers[AUTH_HEADER_KEY.toLowerCase()];
+   // if (authHeader !== AUTH_HEADER_VALUE) {
+   //     console.log(`[Reject] Verification challenge rejected. Missing or invalid auth header.`);
+   //     return res.status(401).json({ error: 'Unauthorized', message: `Expected valid ${AUTH_HEADER_KEY} header` });
+    //}
 
     if (challenge) {
         console.log(`[Success] Verified webhook endpoint challenge: ${challenge}`);
