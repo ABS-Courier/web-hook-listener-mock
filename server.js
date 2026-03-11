@@ -38,7 +38,7 @@ app.get('/webhook', (req, res) => {
     if (challenge) {
         console.log(`[Success] Verified webhook endpoint challenge: ${challenge}`);
         // Often expected to return the exact challenge string as the response body
-        res.status(200).send(challenge);
+        res.status(200).json({challenge});
     } else {
         console.log(`[Warning] GET request to /webhook without a challenge parameter.`);
         res.status(400).send('Expected challenge query parameter for validation');
